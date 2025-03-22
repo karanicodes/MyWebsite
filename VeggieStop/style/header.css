@@ -1,0 +1,62 @@
+.header {
+  position: sticky;
+  top: 0; 
+  background: rgb(14, 105, 38);
+  color: rgb(255, 255, 255);
+  padding: 0;
+  font-size: 20px;
+  z-index: 1000;
+  margin: 0;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 20px;
+  font-size: xx-large;
+  font-weight: 800;
+  height: 150px;
+  flex-shrink: 0;
+}
+.button-edit{
+    width: 504px;
+    margin-left: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.store-name{
+  left: 20;
+  font-size: 28px;
+  display: flex;
+  flex-direction: row;
+  font-family: Bradley Hand, cursive;
+  width: 20%;
+}
+
+.header-info{
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background: rgb(14, 105, 38);
+  padding: 15px 30px;
+}
+.buttons{
+  width: 200px;
+  height: 30px;
+  background-color: rgb(14, 105, 38);
+  border: none;
+  color: white;
+  font-size: 17px;
+  padding-top: 8px;
+}
+.buttons:hover{
+  cursor: pointer;
+}
+.logo{
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+}
