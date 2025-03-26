@@ -4,7 +4,7 @@
     <title>
       VeggieStop.net - The best online grocery shopping platform
     </title>
-    <link rel="icon" href="Screenshot (2).png" type="image/x-icon" />
+    <link rel="icon" href="website/Screenshot (2).png" type="image/x-icon" />
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/body.css">
     <link rel="stylesheet" href="style/footer.css">
@@ -12,32 +12,48 @@
   <body style="padding-bottom: 0px;
               background-color: rgb(255, 255, 255);
               flex: 1;">
+    
     <div class="header">
       <div class="header-info">
-        <div><img class="logo" src="Screenshot (2).png"/></div>
+        <div><img class="logo" src="website/Screenshot (2).png"/></div>
         <div class="store-name">
           VeggieStop
         </div> 
+        
+        <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+
+        <nav id="dropdown-menu" class="dropdown-menu">
+            <button onclick="location.href='#home-section'" class="buttons">Home</button>
+            <button onclick="location.href='#products-section'" class="buttons">Products</button>
+            <button onclick="location.href='#footer-section'" class="buttons">Contact</button>
+            <button onclick="location.href='#footer-section'" class="buttons">About</button>
+            <button onclick="location.href='cart.html'" class="buttons">Cart</button>
+        </nav>
+
         <div class="button-edit">
-          <button class="buttons">Home</button>
-          <button class="buttons">Products</button>
-          <button class="buttons">About</button>
-          <button class="buttons">Contact us</button>
-          <button class="buttons">Log in</button>
+          <button onclick="location.href='#home-section'" 
+          class="buttons">Home</button>
+          <button onclick="location.href='#products-section'" class="buttons">Products</button>
+          <button onclick="location.href='#footer-section'" class="buttons">About</button>
+          <button onclick="location.href='#footer-section'" class="buttons">Contact us</button>
+          <button onclick="location.href='cart.html'" class="buttons">Cart</button>
           
         </div>
       </div>
+    
     </div>
     </div>
 
-    <div class="photo-container">
+    <div id="home-section" class="photo-container">
       <img class="photo-1" src="website/photo-1542838132-92c53300491e.jpeg">
+
       <div class="photo-text">
        <p><h1>Elevate your culinary experience...</h1><br>
         <p>with VeggieStop's diverse selection of fresh <br>vegetables, available 24/7. Our commitment to<br> quality ensures that you receive only the finest<br> produce sourced from trusted growers.From<br> organic options to seasonal specialties,<br> we cater to your every need.</p></p> 
 
       </div>
-    <div><p class="products">Products</p></div>
+    <div id="products-section">
+      <p class="products">Products</p></div>
       <div class="veggie-containers">
         
         <div class="veggie-container">
@@ -139,20 +155,20 @@
     </div>
     
     
-    <footer class="footer">
+    <footer id="footer-section" class="footer">
       <div>
         <p class="footer-info"><h3 class="about">About</h3>
             <p class="about-info">
-              "We provide quality vegetables that optimize <br> your culinary experience"
+              "We provide quality vegetables that optimize your culinary experience"
             </p> 
         </p>
-        <div >
+      <div >
           <p class="contact-title">
             Contact us <br>
           </p>
           <p class="contact-info">
-            0720500000 - Kevin Grants <br>
-            0790500000 - Diana Wangui <br>
+            0720500000 - Monica Nyawira <br>
+            0790500000 - Grace Maringa <br>
   
           </p>
         </div>
@@ -161,5 +177,24 @@
         <p class="copyright">© 2025 VeggieStop. All rights reserved.</p>
       </div>
     </footer>
-  </body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const menuToggle = document.getElementById("menu-toggle");
+          const dropdownMenu = document.getElementById("dropdown-menu");
+      
+          menuToggle.addEventListener("click", function () {
+              dropdownMenu.classList.toggle("active"); // Show or hide menu
+          });
+      
+          // Optional: Hide menu if clicked outside
+          document.addEventListener("click", function (event) {
+              if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                  dropdownMenu.classList.remove("active");
+              }
+          });
+      });
+      </script>
+      </body>
+      
+  <script src="script/addToCart.js"></script> 
 </html>

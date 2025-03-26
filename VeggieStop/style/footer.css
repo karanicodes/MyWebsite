@@ -1,36 +1,67 @@
-.footer{
-  height: 330px;
-  background-color:  rgb(14, 105, 38);
+/* Footer Styles */
+.footer {
+  height: auto;
+  background-color: rgb(14, 105, 38);
   bottom: 0;
   left: 0;
   width: 100%;
-  margin-top: 500px;
+  margin-top: 100px;
   color: whitesmoke;
   font-size: 18px;
-  padding: 0px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.about{
-  width: 12%;
+
+.about {
+  width: 100%;
   padding-top: 20px;
+}
+
+.copyright {
+  width: 100%;
+  color: lightgray;
+  font-size: small;
+  font-style: italic;
+}
+
+.about, .about-info, .contact-title, .contact-info {
+  padding-left: 20px;
+  width: 100%;
+}
+
+.horizontal-line {
+  color: lightgray;
+  margin-top: 10px;
+  width: auto;
+  width: 100%;
   
 }
-.copyright{
-  width: 40%;
-  color: lightgray;
-}
-.about,.about-info,.contact-title,.contact-info{
-  padding-left: 20px;
-  width: 30%;
-}
-.horizontal-line{
-  color: lightgray;
-  margin-top: 50px;
-}
-.contact-title{
+
+.contact-title {
   font-size: 21px;
   font-weight: 900;
 }
-.contact-info{
+
+.contact-info {
   border: 0;
   margin: 0;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 0px;
+  }
+  .about, .about-info, .contact-title, .contact-info, .copyright {
+    width: 100%;
+    padding: 10px ;
+  }
+  .horizontal-line {
+    margin-top: 20px;
+    width: 100%;
+  }
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="website/Screenshot (2).png" type="image/x-icon" />
+    <title>Shopping Cart - VeggieStop</title>
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/body.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/cart.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-info">
+            <div><img class="logo" src="website/Screenshot (2).png"/></div>
+            <div class="store-name">VeggieStop</div> 
+            <div class="button-edit">
+                <button onclick="location.href='landingpage.html/#home-section'" 
+                class="buttons"></button>
+                <button onclick="location.href='#products-section'" class="buttons"></button>
+                <button onclick="location.href='#footer-section'" class="buttons"></button>
+                <button onclick="location.href='#footer-section'" class="buttons"></button>
+                <button onclick="location.href='cart.html'" class="buttons"></button>
+                
+              </div>
+    </div>
+</div>
+    <div class="cart-container">
+        <h1>Your Shopping Cart</h1>
+        <table>
+            <thead>
+                <tr>
+                    
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Items added dynamically -->
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <h3>Total: Ksh <span id="cart-total">0.00</span></h3>
+            <button id="checkoutButton" class="checkout-button">Proceed to Checkout</button>
+
+        </div>
+    </div>
+
+
+    <script src="script/script.js"></script>
+</body>
+</html>
